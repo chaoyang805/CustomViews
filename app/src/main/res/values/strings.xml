@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CustomViews</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="names">
+        <item>WeiboMessage</item>
+        <item>LoadMore</item>
+        <item>Comment</item>
+        <item>Expand</item>
+        <item>SwipeToDissmiss</item>
+        <item>RecyclerView</item>
+    </string-array>
+</resources>
