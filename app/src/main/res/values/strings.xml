@@ -10,5 +10,6 @@
         <item>Expand</item>
         <item>SwipeToDissmiss</item>
         <item>RecyclerView</item>
+        <item>ActivityCompt</item>
     </string-array>
 </resources>

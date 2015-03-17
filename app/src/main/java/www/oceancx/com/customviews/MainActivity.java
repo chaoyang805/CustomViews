@@ -3,6 +3,8 @@ package www.oceancx.com.customviews;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -38,12 +40,21 @@ public class MainActivity extends ListActivity {
                     case 0:
                         intent.setClass(MainActivity.this, MessageCountActivity.class);
                         break;
+                    case 4:
+                        intent.setClass(MainActivity.this, ActivityCompatTest.class);
+                        ActivityOptionsCompat options= ActivityOptionsCompat.makeScaleUpAnimation(view, 0 , 0 , 1000, 1000);
+                        ActivityCompat.startActivity(MainActivity.this, intent,options.toBundle() );
+                        return;
+                    case 5:
+                        intent.setClass(MainActivity.this, ActivityCompatTest.class);
+                        break;
                 }
-                startActivity(intent);
+                ActivityOptionsCompat options = ActivityOptionsCompat.makeCustomAnimation(MainActivity.this, R.anim.slide_bottom_in, R.anim.slide_bottom_out);
+                ActivityCompat.startActivity(MainActivity.this, intent, options.toBundle());
             }
         });
 
-        startActivity(new Intent(this, MessageCountActivity.class));
+
     }
 
     @Override
